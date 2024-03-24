@@ -195,7 +195,7 @@ if page == 'model for tsunami':
         magtype = st.selectbox('magtype', df_Preprocess.magtype.unique())
         cdi = st.slider('cdi', min_value = 0, max_value = 9, value = 3, step = 1)
         mmi = st.slider('mmi', min_value = 1, max_value = 10, value = 1, step = 1)
-        dmin = st.slider('dmin', min_value = 0, max_value = 4, value = 0, step = 1)
+        #dmin = st.slider('dmin', min_value = 0, max_value = 4, value = 0, step = 1)
         gap = st.slider('gap', min_value = 0, max_value = 72, value = 20, step = 5)
         depth = st.slider('depth',min_value = 0, max_value = 114, value = 3, step = 5)
         nst = st.number_input('nst', min_value = 48 , max_value = 900, value = 50, step = 10)
@@ -207,7 +207,6 @@ if page == 'model for tsunami':
         data = {
             'cdi': cdi,
             'mmi': mmi,
-            'dmin': dmin,
             'gap': gap,
             'depth': depth,
             'sig': sig,
