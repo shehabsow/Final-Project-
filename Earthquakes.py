@@ -143,35 +143,35 @@ elif page == 'Multivariate Analysis':
     
     def main():
         
-        st.header('1- The most common alert and its impact on the event?') 
+        st.header('The most common alert and its impact on the event?') 
         
         st.plotly_chart(px.scatter(df_format, x='alert' , y='sig',  color='tsunami',title='RelationShip between sig  vs alert'))
         
-        st.header('2- The months that witness the most earthquakes')
+        st.header(' The months that witness the most earthquakes')
         
         st.plotly_chart(px.pie(mon_highest, names='Month_Name', values='Year',color='Month_Name'))   
         
-        st.header('3- Is there a change in the intensity of earthquakes over time? Is there any effect of a tsunami?')
+        st.header(' Is there a change in the intensity of earthquakes over time? Is there any effect of a tsunami?')
         
         st.plotly_chart( px.line(df_time, x= 'sig', y= ['Year'],  color= 'tsunami', title= 'Total earthquakes & tsunami over Time Period (1995-2023)'))
         
-        st.header('4- What is the most media coverage of the event?')
+        st.header(' What is the most media coverage of the event?')
         
         st.plotly_chart(px.bar(occu_avg, x= 'net', y= 'sig',color='tsunami'))
         
-        st.header('5-The impact of earthquake prediction stations on the residential area')
+        st.header('The impact of earthquake prediction stations on the residential area')
         
         st.plotly_chart(px.bar(impact, x= 'location', y= 'sig',color='nst'))
         
-        st.header('6- impact of algorithms on event importance')
+        st.header(' impact of algorithms on event importance')
         
         st.plotly_chart(px.bar(algorithms, x= 'magtype', y= 'sig', color= 'tsunami' ))
         
-        st.header('7- How many earthquakes have occurred and what is the strength of the earthquake?')
+        st.header(' How many earthquakes have occurred and what is the strength of the earthquake?')
         
         st.plotly_chart(px.bar(earthquakes_avg, x= 'location', y= 'title', color= 'magnitude'))
         
-        st.header('8- What is the alert rate affected by the event?')
+        st.header(' What is the alert rate affected by the event?')
         
         st.plotly_chart(px.bar(affected, x= 'alert', y= 'sig',color= 'mmi'))
         
